@@ -3,6 +3,7 @@
 #include "queue.h"
 #include "hf_link.h"
 #include "vcsel.h"
+#include "photodetector.h"
 class Xm_Hardware
 {
 	public:
@@ -25,7 +26,7 @@ class Xm_Hardware
 		void vcselBiasControl	(void);
 		void vcselSinep2pControl(void);
 		void vcselSinefreControl(void);
-		
+		void measureDataUpdate	(void);
 };
 extern Queue queue;
 extern Xm_Abstract xm_robot;

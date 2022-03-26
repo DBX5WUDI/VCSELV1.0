@@ -45,6 +45,7 @@
 ".\obj\xm_abstract.o"
 ".\obj\xm_hardware.o"
 ".\obj\vcsel.o"
+".\obj\photodetector.o"
 --strict --scatter ".\OBJ\XMBOT.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

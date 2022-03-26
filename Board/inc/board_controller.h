@@ -7,7 +7,7 @@ extern "C" {											//board supporting files must write these lines, many.c f
 
 #include "stm32f4xx.h"	
 #include "delay.h"
-
+	
 class Board_controller
 {
 	public:
@@ -38,7 +38,9 @@ class Board_controller
 		void SPI2SendBuffer(uint8_t *buffer, uint16_t len);
 		void SPI3SendUSInt(uint16_t Data);
 		void SPI3SendBuffer(uint16_t *buffer, uint16_t len);
-		/*****************************************************************************************/
+		void DMAInit(uint32_t Memory0BaseAddr);
+		uint16_t ADC1GetChar(void);
+	/*****************************************************************************************/
 	private:
 		/*****************************************************************************************/
 		void Xm_System_timer_Init(void);							//initialize the system timer
@@ -50,13 +52,11 @@ class Board_controller
 		void Vcsel_Bias_Init(void);									//initialize the VCSEL DC bias voltage control, SPI1
 		void Vcsel_Sinep2p_Init(void);								//initialize the VCSEL sine wave's peak-to-peak value , SPI2 initialization
 		void Vcsel_Sinefre_Init(void);								//initialize the VCSEL sine wave's frequency , SPI3 initialization
-
-	
+		void Vcsel_Photodetector_Init(void);						//initialize Photodetector, ADC1_IN0 initialization
 		/*****************************************************************************************/
 };	
 
 extern Board_controller board_controller;
-
 #ifdef __cplusplus
 }
 #endif

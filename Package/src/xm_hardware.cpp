@@ -9,6 +9,7 @@ Xm_Hardware xm_hardware;
 /*robot hardware initialization*/
 void Xm_Hardware::xmHardwareInit(void)
 {
+	photodetector.DMAEnable();
 }
 /*the hardware update, port to main loop body*/
 void Xm_Hardware::xmHardwareTopCall(void)
@@ -16,6 +17,7 @@ void Xm_Hardware::xmHardwareTopCall(void)
 	vcselBiasControl();
 	vcselSinep2pControl();
 	vcselSinefreControl();
+	measureDataUpdate();
 }	
 /*control VCSEL's bias current value*/
 void Xm_Hardware::vcselBiasControl(void)    
@@ -45,3 +47,7 @@ void Xm_Hardware::vcselSinefreControl(void)
 	}		
 }
 
+void Xm_Hardware::measureDataUpdate(void)
+{
+	xm_robot.measure_light_intensity = photodetector.read_pd();
+}

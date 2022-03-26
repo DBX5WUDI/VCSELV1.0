@@ -288,6 +288,10 @@ unsigned char HFLink::packageAnalysis(void)
 			analysis_state=setCommandAnalysis(command_state_ , (unsigned char *)&xm_robot->vcsel_sinefre_value , sizeof(xm_robot->vcsel_sinefre_value));
 			break;	
 		
+		case READ_PD:
+			analysis_state=readCommandAnalysis(command_state_ , (unsigned char *)&xm_robot->measure_light_intensity , sizeof(xm_robot->measure_light_intensity));
+			break;
+		
 		default :
 			analysis_state=0;
 			break;	

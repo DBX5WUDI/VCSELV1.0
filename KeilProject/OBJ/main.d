@@ -42,3 +42,4 @@
 .\obj\main.o: ..\Board\inc\delay.h
 .\obj\main.o: E:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\main.o: ..\Package\inc\vcsel.h
+.\obj\main.o: ..\Package\inc\photodetector.h

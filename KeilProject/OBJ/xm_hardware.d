@@ -42,3 +42,4 @@
 .\obj\xm_hardware.o: ..\Board\inc\delay.h
 .\obj\xm_hardware.o: E:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 .\obj\xm_hardware.o: ..\Package\inc\vcsel.h
+.\obj\xm_hardware.o: ..\Package\inc\photodetector.h

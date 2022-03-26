@@ -1,12 +1,12 @@
 Dependencies for Project 'XMBOT', Target 'XMBOT': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (..\Project\main.cpp)(0x620DA4D4)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
-I (..\Package\inc\xm_hardware.h)(0x620DA5EF)
+I (..\Package\inc\xm_hardware.h)(0x6232D254)
 I (..\Package\inc\queue.h)(0x5B5F12AE)
-I (..\Package\inc\hf_link.h)(0x620DA6BB)
-I (..\Package\inc\xm_abstract.h)(0x620A473C)
-I (..\Board\inc\board_controller.h)(0x620F5734)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Package\inc\hf_link.h)(0x62331769)
+I (..\Package\inc\xm_abstract.h)(0x6232DBE4)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -42,14 +42,15 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 I (..\Board\inc\delay.h)(0x5B5F12AE)
 I (E:\MDK5\ARM\ARMCC\include\string.h)(0x6025237E)
-I (..\Package\inc\vcsel.h)(0x620F8520)
+I (..\Package\inc\vcsel.h)(0x62382F41)
+I (..\Package\inc\photodetector.h)(0x62399B7C)
 F (..\Project\stm32f4xx_it.cpp)(0x620DA4CA)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_it.o --omf_browse .\obj\stm32f4xx_it.crf --depend .\obj\stm32f4xx_it.d)
-I (..\Package\inc\xm_hardware.h)(0x620DA5EF)
+I (..\Package\inc\xm_hardware.h)(0x6232D254)
 I (..\Package\inc\queue.h)(0x5B5F12AE)
-I (..\Package\inc\hf_link.h)(0x620DA6BB)
-I (..\Package\inc\xm_abstract.h)(0x620A473C)
-I (..\Board\inc\board_controller.h)(0x620F5734)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Package\inc\hf_link.h)(0x62331769)
+I (..\Package\inc\xm_abstract.h)(0x6232DBE4)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -85,11 +86,12 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 I (..\Board\inc\delay.h)(0x5B5F12AE)
 I (E:\MDK5\ARM\ARMCC\include\string.h)(0x6025237E)
-I (..\Package\inc\vcsel.h)(0x620F8520)
+I (..\Package\inc\vcsel.h)(0x62382F41)
+I (..\Package\inc\photodetector.h)(0x62399B7C)
 F (..\Project\startup_stm32f40_41xxx.s)(0x5B600716)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include--pd "__UVISION_VERSION SETA 535" --pd "STM32F40_41xxx SETA 1"--list .\startup_stm32f40_41xxx.lst --xref -o .\obj\startup_stm32f40_41xxx.o --depend .\obj\startup_stm32f40_41xxx.d)
 F (..\Stm32lib\src\misc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\misc.o --omf_browse .\obj\misc.crf --depend .\obj\misc.d)
 I (..\Stm32lib\include\misc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -124,7 +126,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_adc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_adc.o --omf_browse .\obj\stm32f4xx_adc.crf --depend .\obj\stm32f4xx_adc.d)
 I (..\Stm32lib\include\stm32f4xx_adc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -159,7 +161,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_can.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_can.o --omf_browse .\obj\stm32f4xx_can.crf --depend .\obj\stm32f4xx_can.d)
 I (..\Stm32lib\include\stm32f4xx_can.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -194,7 +196,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_crc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_crc.o --omf_browse .\obj\stm32f4xx_crc.crf --depend .\obj\stm32f4xx_crc.d)
 I (..\Stm32lib\include\stm32f4xx_crc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -229,7 +231,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_cryp.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_cryp.o --omf_browse .\obj\stm32f4xx_cryp.crf --depend .\obj\stm32f4xx_cryp.d)
 I (..\Stm32lib\include\stm32f4xx_cryp.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -264,7 +266,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_cryp_aes.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_cryp_aes.o --omf_browse .\obj\stm32f4xx_cryp_aes.crf --depend .\obj\stm32f4xx_cryp_aes.d)
 I (..\Stm32lib\include\stm32f4xx_cryp.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -299,7 +301,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_cryp_des.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_cryp_des.o --omf_browse .\obj\stm32f4xx_cryp_des.crf --depend .\obj\stm32f4xx_cryp_des.d)
 I (..\Stm32lib\include\stm32f4xx_cryp.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -334,7 +336,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_cryp_tdes.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_cryp_tdes.o --omf_browse .\obj\stm32f4xx_cryp_tdes.crf --depend .\obj\stm32f4xx_cryp_tdes.d)
 I (..\Stm32lib\include\stm32f4xx_cryp.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -369,7 +371,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_dac.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_dac.o --omf_browse .\obj\stm32f4xx_dac.crf --depend .\obj\stm32f4xx_dac.d)
 I (..\Stm32lib\include\stm32f4xx_dac.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -404,7 +406,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_dbgmcu.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_dbgmcu.o --omf_browse .\obj\stm32f4xx_dbgmcu.crf --depend .\obj\stm32f4xx_dbgmcu.d)
 I (..\Stm32lib\include\stm32f4xx_dbgmcu.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -439,7 +441,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_dcmi.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_dcmi.o --omf_browse .\obj\stm32f4xx_dcmi.crf --depend .\obj\stm32f4xx_dcmi.d)
 I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -474,7 +476,7 @@ I (..\Stm32lib\include\stm32f4xx_dac.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_dma.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_dma.o --omf_browse .\obj\stm32f4xx_dma.crf --depend .\obj\stm32f4xx_dma.d)
 I (..\Stm32lib\include\stm32f4xx_dma.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -509,7 +511,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_dma2d.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_dma2d.o --omf_browse .\obj\stm32f4xx_dma2d.crf --depend .\obj\stm32f4xx_dma2d.d)
 I (..\Stm32lib\include\stm32f4xx_dma2d.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -545,7 +547,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_exti.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_exti.o --omf_browse .\obj\stm32f4xx_exti.crf --depend .\obj\stm32f4xx_exti.d)
 I (..\Stm32lib\include\stm32f4xx_exti.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -580,7 +582,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_flash.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_flash.o --omf_browse .\obj\stm32f4xx_flash.crf --depend .\obj\stm32f4xx_flash.d)
 I (..\Stm32lib\include\stm32f4xx_flash.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -615,7 +617,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_flash_ramfunc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_flash_ramfunc.o --omf_browse .\obj\stm32f4xx_flash_ramfunc.crf --depend .\obj\stm32f4xx_flash_ramfunc.d)
 I (..\Stm32lib\include\stm32f4xx_flash_ramfunc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -651,7 +653,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_fsmc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_fsmc.o --omf_browse .\obj\stm32f4xx_fsmc.crf --depend .\obj\stm32f4xx_fsmc.d)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -686,7 +688,7 @@ I (..\Stm32lib\include\stm32f4xx_dac.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_gpio.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_gpio.o --omf_browse .\obj\stm32f4xx_gpio.crf --depend .\obj\stm32f4xx_gpio.d)
 I (..\Stm32lib\include\stm32f4xx_gpio.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -721,7 +723,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_hash.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_hash.o --omf_browse .\obj\stm32f4xx_hash.crf --depend .\obj\stm32f4xx_hash.d)
 I (..\Stm32lib\include\stm32f4xx_hash.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -756,7 +758,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_hash_md5.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_hash_md5.o --omf_browse .\obj\stm32f4xx_hash_md5.crf --depend .\obj\stm32f4xx_hash_md5.d)
 I (..\Stm32lib\include\stm32f4xx_hash.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -791,7 +793,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_hash_sha1.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_hash_sha1.o --omf_browse .\obj\stm32f4xx_hash_sha1.crf --depend .\obj\stm32f4xx_hash_sha1.d)
 I (..\Stm32lib\include\stm32f4xx_hash.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -826,7 +828,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_i2c.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_i2c.o --omf_browse .\obj\stm32f4xx_i2c.crf --depend .\obj\stm32f4xx_i2c.d)
 I (..\Stm32lib\include\stm32f4xx_i2c.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -861,7 +863,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_iwdg.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_iwdg.o --omf_browse .\obj\stm32f4xx_iwdg.crf --depend .\obj\stm32f4xx_iwdg.d)
 I (..\Stm32lib\include\stm32f4xx_iwdg.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -896,7 +898,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_ltdc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_ltdc.o --omf_browse .\obj\stm32f4xx_ltdc.crf --depend .\obj\stm32f4xx_ltdc.d)
 I (..\Stm32lib\include\stm32f4xx_ltdc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -932,7 +934,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_pwr.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_pwr.o --omf_browse .\obj\stm32f4xx_pwr.crf --depend .\obj\stm32f4xx_pwr.d)
 I (..\Stm32lib\include\stm32f4xx_pwr.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -967,7 +969,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_rcc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_rcc.o --omf_browse .\obj\stm32f4xx_rcc.crf --depend .\obj\stm32f4xx_rcc.d)
 I (..\Stm32lib\include\stm32f4xx_rcc.h)(0x620E5955)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1002,7 +1004,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_rng.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_rng.o --omf_browse .\obj\stm32f4xx_rng.crf --depend .\obj\stm32f4xx_rng.d)
 I (..\Stm32lib\include\stm32f4xx_rng.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1037,7 +1039,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_rtc.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_rtc.o --omf_browse .\obj\stm32f4xx_rtc.crf --depend .\obj\stm32f4xx_rtc.d)
 I (..\Stm32lib\include\stm32f4xx_rtc.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1072,7 +1074,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_sai.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_sai.o --omf_browse .\obj\stm32f4xx_sai.crf --depend .\obj\stm32f4xx_sai.d)
 I (..\Stm32lib\include\stm32f4xx_sai.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1108,7 +1110,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_sdio.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_sdio.o --omf_browse .\obj\stm32f4xx_sdio.crf --depend .\obj\stm32f4xx_sdio.d)
 I (..\Stm32lib\include\stm32f4xx_sdio.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1143,7 +1145,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_spi.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_spi.o --omf_browse .\obj\stm32f4xx_spi.crf --depend .\obj\stm32f4xx_spi.d)
 I (..\Stm32lib\include\stm32f4xx_spi.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1178,7 +1180,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_syscfg.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_syscfg.o --omf_browse .\obj\stm32f4xx_syscfg.crf --depend .\obj\stm32f4xx_syscfg.d)
 I (..\Stm32lib\include\stm32f4xx_syscfg.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1213,7 +1215,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_tim.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_tim.o --omf_browse .\obj\stm32f4xx_tim.crf --depend .\obj\stm32f4xx_tim.d)
 I (..\Stm32lib\include\stm32f4xx_tim.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1248,7 +1250,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_usart.c)(0x5A97A433)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_usart.o --omf_browse .\obj\stm32f4xx_usart.crf --depend .\obj\stm32f4xx_usart.d)
 I (..\Stm32lib\include\stm32f4xx_usart.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1283,7 +1285,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\stm32f4xx_wwdg.c)(0x597699F4)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\stm32f4xx_wwdg.o --omf_browse .\obj\stm32f4xx_wwdg.crf --depend .\obj\stm32f4xx_wwdg.d)
 I (..\Stm32lib\include\stm32f4xx_wwdg.h)(0x597699F4)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1317,7 +1319,7 @@ I (..\Stm32lib\include\stm32f4xx_dac.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Stm32lib\src\system_stm32f4xx.c)(0x57E27AEC)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\system_stm32f4xx.o --omf_browse .\obj\system_stm32f4xx.crf --depend .\obj\system_stm32f4xx.d)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1353,7 +1355,7 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 F (..\Board\src\delay.c)(0x5B5F12AE)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\delay.o --omf_browse .\obj\delay.crf --depend .\obj\delay.d)
 I (..\Board\inc\delay.h)(0x5B5F12AE)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1387,9 +1389,9 @@ I (..\Stm32lib\include\stm32f4xx_can.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_dac.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
-F (..\Board\src\broad_controller.cpp)(0x620F8A2E)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\broad_controller.o --omf_browse .\obj\broad_controller.crf --depend .\obj\broad_controller.d)
-I (..\Board\inc\board_controller.h)(0x620F5734)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+F (..\Board\src\broad_controller.cpp)(0x62399B9F)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\broad_controller.o --omf_browse .\obj\broad_controller.crf --depend .\obj\broad_controller.d)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1426,11 +1428,11 @@ I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 I (..\Board\inc\delay.h)(0x5B5F12AE)
 F (..\Package\src\queue.cpp)(0x5B5F12AE)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\queue.o --omf_browse .\obj\queue.crf --depend .\obj\queue.d)
 I (..\Package\inc\queue.h)(0x5B5F12AE)
-F (..\Package\src\hf_link.cpp)(0x620F6083)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\hf_link.o --omf_browse .\obj\hf_link.crf --depend .\obj\hf_link.d)
-I (..\Package\inc\hf_link.h)(0x620DA6BB)
-I (..\Package\inc\xm_abstract.h)(0x620A473C)
-I (..\Board\inc\board_controller.h)(0x620F5734)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+F (..\Package\src\hf_link.cpp)(0x62331922)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\hf_link.o --omf_browse .\obj\hf_link.crf --depend .\obj\hf_link.d)
+I (..\Package\inc\hf_link.h)(0x62331769)
+I (..\Package\inc\xm_abstract.h)(0x6232DBE4)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1467,14 +1469,14 @@ I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 I (..\Board\inc\delay.h)(0x5B5F12AE)
 I (E:\MDK5\ARM\ARMCC\include\string.h)(0x6025237E)
 F (..\Package\src\xm_abstract.cpp)(0x5B5F12AE)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\xm_abstract.o --omf_browse .\obj\xm_abstract.crf --depend .\obj\xm_abstract.d)
-I (..\Package\inc\xm_abstract.h)(0x620A473C)
-F (..\Package\src\xm_hardware.cpp)(0x620F6261)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\xm_hardware.o --omf_browse .\obj\xm_hardware.crf --depend .\obj\xm_hardware.d)
-I (..\Package\inc\xm_hardware.h)(0x620DA5EF)
+I (..\Package\inc\xm_abstract.h)(0x6232DBE4)
+F (..\Package\src\xm_hardware.cpp)(0x62397375)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\xm_hardware.o --omf_browse .\obj\xm_hardware.crf --depend .\obj\xm_hardware.d)
+I (..\Package\inc\xm_hardware.h)(0x6232D254)
 I (..\Package\inc\queue.h)(0x5B5F12AE)
-I (..\Package\inc\hf_link.h)(0x620DA6BB)
-I (..\Package\inc\xm_abstract.h)(0x620A473C)
-I (..\Board\inc\board_controller.h)(0x620F5734)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Package\inc\hf_link.h)(0x62331769)
+I (..\Package\inc\xm_abstract.h)(0x6232DBE4)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
@@ -1510,11 +1512,50 @@ I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
 I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
 I (..\Board\inc\delay.h)(0x5B5F12AE)
 I (E:\MDK5\ARM\ARMCC\include\string.h)(0x6025237E)
-I (..\Package\inc\vcsel.h)(0x620F8520)
-F (..\Package\src\vcsel.cpp)(0x620F858E)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\vcsel.o --omf_browse .\obj\vcsel.crf --depend .\obj\vcsel.d)
-I (..\Package\inc\vcsel.h)(0x620F8520)
-I (..\Board\inc\board_controller.h)(0x620F5734)
-I (..\Stm32lib\include\stm32f4xx.h)(0x57E27AEC)
+I (..\Package\inc\vcsel.h)(0x62382F41)
+I (..\Package\inc\photodetector.h)(0x62399B7C)
+F (..\Package\src\vcsel.cpp)(0x62396FC4)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\vcsel.o --omf_browse .\obj\vcsel.crf --depend .\obj\vcsel.d)
+I (..\Package\inc\vcsel.h)(0x62382F41)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
+I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
+I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)
+I (..\Stm32lib\CMSIS\Include\core_cmFunc.h)(0x59780E98)
+I (..\Stm32lib\CMSIS\core_cm4_simd.h)(0x57E27AEC)
+I (..\Stm32lib\include\system_stm32f4xx.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx_conf.h)(0x57E27AEC)
+I (..\Stm32lib\include\stm32f4xx_adc.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_crc.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_dbgmcu.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_dma.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_exti.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_flash.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_gpio.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_i2c.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_iwdg.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_pwr.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_rcc.h)(0x620E5955)
+I (..\Stm32lib\include\stm32f4xx_rtc.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_sdio.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_spi.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_syscfg.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_tim.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_usart.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_wwdg.h)(0x597699F4)
+I (..\Stm32lib\include\misc.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_cryp.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_hash.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_rng.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_can.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_dac.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_dcmi.h)(0x597699F4)
+I (..\Stm32lib\include\stm32f4xx_fsmc.h)(0x597699F4)
+I (..\Board\inc\delay.h)(0x5B5F12AE)
+F (..\Package\src\photodetector.cpp)(0x6239A0FA)(--cpp -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS\Include -I ..\Stm32lib\include -I ..\Stm32lib\CMSIS -I ..\Board\inc -I ..\Package\inc-IE:\MDK5\Arm\Packs\ARM\STM32F4xx_DFP\1.0.8\Device\Include-D__UVISION_VERSION="535" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o .\obj\photodetector.o --omf_browse .\obj\photodetector.crf --depend .\obj\photodetector.d)
+I (..\Package\inc\photodetector.h)(0x62399B7C)
+I (..\Board\inc\board_controller.h)(0x62397F12)
+I (..\Stm32lib\include\stm32f4xx.h)(0x62399338)
 I (..\Stm32lib\CMSIS\core_cm4.h)(0x57E27AEC)
 I (E:\MDK5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (..\Stm32lib\CMSIS\Include\core_cmInstr.h)(0x59780E46)

@@ -23,10 +23,10 @@ void Board_controller::boardBasicInit(void)
 	Xm_Led_Init();
 	Xm_Communicate_Init();
 	Xm_Timer_Init();
-	Xm_Motor_Communicate_Init();
 	Vcsel_Bias_Init();
 	Vcsel_Sinep2p_Init();
 	Vcsel_Sinefre_Init();	
+	Vcsel_Photodetector_Init();
 }
 /*chip delay functions initialization*/
 void Board_controller::Xm_System_timer_Init()
@@ -120,59 +120,6 @@ void Board_controller::Xm_Timer_Init(void)
     NVIC_Init(&NVIC_InitStructure);
                     
     TIM_Cmd(TIM6 , ENABLE);
-}
-/*chip Controller Area Network1 initialization*/
-void Board_controller::Xm_Motor_Communicate_Init(void)
-{
-    CAN_InitTypeDef        CAN_InitStructure;
-    CAN_FilterInitTypeDef  CAN_FilterInitStructure;
-    GPIO_InitTypeDef  GPIO_InitStructure;
-    NVIC_InitTypeDef NVIC_InitStructure;
-	
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_CAN1, ENABLE);
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-	
-    GPIO_StructInit(&GPIO_InitStructure);
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF; 
-    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
-    GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-    GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_11| GPIO_Pin_12;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
-	
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource12, GPIO_AF_CAN1);
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource11, GPIO_AF_CAN1);
-
-    CAN_InitStructure.CAN_TTCM = DISABLE;			  
-    CAN_InitStructure.CAN_AWUM = DISABLE;			 
-    CAN_InitStructure.CAN_NART = ENABLE;
-    CAN_InitStructure.CAN_RFLM = DISABLE;
-    CAN_InitStructure.CAN_TXFP = DISABLE;
-    CAN_InitStructure.CAN_Mode = CAN_Mode_Normal;	 
-    CAN_InitStructure.CAN_SJW  = CAN_SJW_1tq;
-    CAN_InitStructure.CAN_BS1  = CAN_BS2_6tq;
-    CAN_InitStructure.CAN_BS2  = CAN_BS1_7tq;
-    CAN_InitStructure.CAN_Prescaler =3;               
-    CAN_Init(CAN1, &CAN_InitStructure);
-	
-	CAN_FilterInitStructure.CAN_FilterNumber=0;
-    CAN_FilterInitStructure.CAN_FilterMode  =CAN_FilterMode_IdMask;
-    CAN_FilterInitStructure.CAN_FilterScale =CAN_FilterScale_32bit;
-    CAN_FilterInitStructure.CAN_FilterIdHigh=0x0000;
-    CAN_FilterInitStructure.CAN_FilterIdLow =0x0000;
-    CAN_FilterInitStructure.CAN_FilterMaskIdHigh=0x0000;
-    CAN_FilterInitStructure.CAN_FilterMaskIdLow=0x0000;
-	CAN_FilterInitStructure.CAN_FilterFIFOAssignment=CAN_Filter_FIFO0;
-    CAN_FilterInitStructure.CAN_FilterActivation=ENABLE;
-    CAN_FilterInit(&CAN_FilterInitStructure);
-	
-	CAN_ITConfig(CAN1, CAN_IT_FMP0, ENABLE);  	
-  
-	NVIC_InitStructure.NVIC_IRQChannel = CAN1_RX0_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;  
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;         
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;	          
-    NVIC_Init(&NVIC_InitStructure);
 }
 /*VCSEL bias value control, SPI1 initialization*/
 void Board_controller::Vcsel_Bias_Init(void)
@@ -304,24 +251,6 @@ void Board_controller::Vcsel_Sinefre_Init(void)
 	SPI_Cmd(SPI3,ENABLE);
 }
 
-/*chip send can data function*/
-void Board_controller::Motor_Sendmessage(unsigned int ID, uint8_t *TxBuf)
-{
-    CanTxMsg TxMessageBuffer;
-    uint8_t i;
-	uint8_t Length=8;
-    TxMessageBuffer.StdId=ID;
-    TxMessageBuffer.RTR=0;
-    TxMessageBuffer.IDE=0;
-    TxMessageBuffer.DLC=Length;
-    
-    for(i=0;i<Length;i++)
-    {
-        TxMessageBuffer.Data[i]=*(TxBuf+i);
-    }
-    CAN_Transmit(CAN1, &TxMessageBuffer);  
-
-}  
 /*chip set level output function*/
 void Board_controller::SetLedState(uint8_t led_id, uint8_t operation)
 {
@@ -431,4 +360,77 @@ void Board_controller::SPI3SendBuffer(uint16_t *buffer, uint16_t len)
 	delay_us(20);						//necessary delay,at least 2us
 	GPIO_SetBits(GPIOA , GPIO_Pin_15);
 }
+/*initialize the Photodetector, ADC1_IN0 initialization*/
+void Board_controller::Vcsel_Photodetector_Init(void)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+	ADC_CommonInitTypeDef ADC_CommonInitStructure;
+	ADC_InitTypeDef ADC_InitStructure;
+
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+	
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL ;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	
+	RCC_APB2PeriphResetCmd(RCC_APB2Periph_ADC1,ENABLE);
+	RCC_APB2PeriphResetCmd(RCC_APB2Periph_ADC1,DISABLE);
+	
+	ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_5Cycles;
+	ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_1; 
+	ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4;//ADCCLK=PCLK2/4=84/4=21Mhz
+	ADC_CommonInit(&ADC_CommonInitStructure);
+	
+	ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;
+	ADC_InitStructure.ADC_ScanConvMode = ENABLE;
+	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;
+	ADC_InitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
+	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
+	ADC_InitStructure.ADC_NbrOfConversion = 1;
+	ADC_Init(ADC1, &ADC_InitStructure); 
+}	
+void Board_controller::DMAInit(uint32_t  Memory0BaseAddr)
+{
+	/*initialize DAM2 Channel_0 Stream0*/
+/**/DMA_InitTypeDef DMA_InitStructure;                 
+/**/RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);		
+
+/**/DMA_DeInit(DMA2_Stream0);										// reset DAM1_Stream5
+/**/while (DMA_GetCmdStatus(DMA2_Stream0) != DISABLE){}				// wait stream5
+/**/DMA_InitStructure.DMA_Channel = DMA_Channel_0;					// select channel
+/**/DMA_InitStructure.DMA_PeripheralBaseAddr = (u32)&ADC1->DR;		//
+/**/DMA_InitStructure.DMA_Memory0BaseAddr = Memory0BaseAddr;						// 
+/**/DMA_InitStructure.DMA_DIR =  DMA_DIR_PeripheralToMemory;
+/**/DMA_InitStructure.DMA_BufferSize = 20;									// Data transfer amount 
+/**/DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;		// Peripheral non-incremental mode
+/**/DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;					// Memory increment mode	
+/**/DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;	//Peripheral data length:16bit
+/**/DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;		//Memory data length:16bit
+/**/DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
+/**/DMA_InitStructure.DMA_Priority = DMA_Priority_High;
+/**/DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Disable;         
+/**/DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
+/**/DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;					//Memory burst single transfer
+/**/DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;			//External burst single transmission
+/**/DMA_Init(DMA2_Stream0, &DMA_InitStructure);									//initialize DMA Stream
+
+	DMA_Cmd(DMA2_Stream0, ENABLE);
+	ADC_DMARequestAfterLastTransferCmd(ADC1, ENABLE);
+	ADC_DMACmd(ADC1, ENABLE);	
+	ADC_Cmd(ADC1, ENABLE);
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_480Cycles );	
+	ADC_SoftwareStartConv(ADC1);
+}
+
+uint16_t Board_controller::ADC1GetChar(void)
+{
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_480Cycles );
+	ADC_SoftwareStartConv(ADC1); 
+	while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));
+	return ADC_GetConversionValue(ADC1); 
+}
+
 
